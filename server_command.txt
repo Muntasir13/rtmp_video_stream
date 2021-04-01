@@ -1,0 +1,1 @@
+uwsgi --module app:app --http :5000 --http-processes 4 --processes 1 --threads 50 --post-buffering 65535 --buffer-size 65535 --offload-threads 1
