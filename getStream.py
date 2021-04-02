@@ -4,7 +4,6 @@ from camera_config.camera import CameraStream
 
 class Stream:
     def __init__(self, source):
-        # self.video_source = cv2.VideoCapture(source)
         self.video_source = CameraStream(source).start()
 
 
