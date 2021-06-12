@@ -6,8 +6,11 @@ class CameraStream:
     """
         Threaded class for capturing camera stream quickly in real time, media decoder: FFMPEG
 
-        objective: to capture each frame smoothly without any delay
-        output: return each frame
+        objective: 
+            to capture each frame smoothly without any delay
+        
+        return:
+            return each frame
     """
 
     def __init__(self, src=0, width=800, height=600):
@@ -15,12 +18,12 @@ class CameraStream:
         """
             constructor function of class CameraStream
 
-            input:
+            arguments:
                 src: type - int/string, source of camera. int if webcam else string if ipcam/ptz/other stream sources, default 0 for webcam
                 width: type - int, camera feed width
                 height: type - int, camera feed height
             
-            output:
+            return:
                 none
 
         """
@@ -38,8 +41,11 @@ class CameraStream:
         """
             thread start function of class CameraStream
 
-            input: none
-            output: return to self instance
+            arguments:
+                none
+
+            return:
+                return to self instance
 
         """
 
@@ -56,8 +62,11 @@ class CameraStream:
         """
             update thread for continuous frame reading of class CameraStream
 
-            input: none
-            output: return to self instance
+            arguments:
+                none
+
+            return:
+                return to self instance
 
         """
 
@@ -74,8 +83,10 @@ class CameraStream:
         """
             reading thread to return each frame towards driver class/function of class CameraStream
 
-            input: none
-            output: 
+            arguments:
+                none
+
+            return: 
                 ret: type - bool, if camera stream available return true, return false otherwise
                 frame: type - np.array, return numpy array of each frame.
         """
@@ -91,8 +102,11 @@ class CameraStream:
         """
             thread stopper of CameraStream
 
-            input: none
-            output: none
+            arguments:
+                none
+            
+            return:
+                none
 
         """
 
